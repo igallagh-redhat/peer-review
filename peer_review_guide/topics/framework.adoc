@@ -1,0 +1,410 @@
+[[peer-review-framework]]
+== Peer review framework
+The peer review framework includes guiding principles and the issues that should be reviewed.
+
+[discrete]
+[[about-the-peer-review-framework]]
+=== About the Peer review framework
+
+The peer review framework uses the following guiding principles:
+
+* _The IBM Style Guide_ describes most of the writing rules to follow. Where possible, the framework provides guidance on where to find more information.
+
+* Whenever possible, the framework includes links to examples and training modules. The link:TODO[Minimalism quality initiative] handles the training modules.
+
+* Issues are classified into four levels by complexity. The level numbers do not determine the order to follow while doing a peer review. Their main purpose is to organize issues from easy to advanced. You can start from whatever level you want. For example, it can be more effective to start with fourth-level and third-level issues when reviewing large sections or chapters.
++
+In addition, levels are great for setting expectations when requesting a peer review. For example, you can come to a mutual agreement with the reviewer to concentrate on a particular level or levels only. For more details, see xref:about-levels[About levels of issues in the peer review framework].
+
+* If necessary, individual teams are free to adjust the peer review framework to fit their needs (documentation format, time frame, and so on).
+
+[[first-level-issues]]
+=== First-level issues - basic English
+
+
+First-level issues include rules that are specific and unambiguous, often based on enumeration and lists. Violations are mostly trivial to fix and often automatically detectable.
+
+The following sections contain a list of first-level issues:
+
+[[proper-english-grammar]]
+==== Use proper American English grammar
+
+Make sure that the documentation is written according to the official style guides:
+
+* _The IBM Style Guide_ - an overview of which is link:TODO[available for quick reference]
+* link:https://redhat-documentation.github.io/supplementary-style-guide/[Red Hat supplementary style guide for product documentation], which includes a glossary of terms and conventions
+
+[[correct-english-spelling]]
+==== Use correct American English spelling
+
+Make sure that the correct American English spelling is used and that there are no typographical mistakes.
+
+[[no-slang-or-non-english-words]]
+==== Do not use slang or non-English words
+
+Make sure that slang and words that are not proper American English are not used.
+
+*Example:* repos, certs
+
+*Improved:* repositories, certificates
+
+See _Writing for diverse audiences_ in _The IBM Style Guide_ for details.
+
+*Example:* in lieu of, e.g.
+
+*Improved:* instead of, for example or such as
+
+See _Latin abbreviations_ and _Appendix C. Word Usage_ in _The IBM Style Guide_.
+
+[[proper-word-usage]]
+==== Follow proper word usage
+
+Make sure that word usage is correct.
+
+*Example:* x86_64
+
+*Improved:* the AMD64 and Intel 64 architectures
+
+*Example:* hostname, username, filesystem
+
+*Improved:* host name, user name, file system
+
+See the link:https://redhat-documentation.github.io/supplementary-style-guide/#glossary-terms-conventions[Glossary of terms and conventions] and _The IBM Style Guide_ (_Appendix C. Word usage_) for details.
+
+[[acronyms-expanded-on-first-use]]
+==== Expand acronyms on first use
+
+Make sure that acronyms are expanded the first they appear in a document.
+
+Use one of the bots when unsure:
+
+* The link:TODO[Acrobot IRC bot] - deployed on #docs, #ecsbrno
+* link:TODO[Acrobot for gchat] - deployed in various docs-related rooms, such as `RHEL Docs`
+
+For Red Hat acronyms, see also the link:https://redhat-documentation.github.io/supplementary-style-guide/#glossary-terms-conventions[Red Hat supplementary style guide].
+
+See _The IBM Style Guide_ (_Abbreviations_) for more information.
+
+[[named-entities-qualified-on-first-use]]
+==== Qualify named entities on first use
+
+Establish the type of named entities on first use.
+
+*Example:* Previously, `sosreport` generated warning messages about gfs2 on systems that did not use gfs2.
+
+*Improved:* Previously, the `sosreport` _utility_ generated warning messages about gfs2 _components_ on systems that did not use the gfs2 _file system_.
+
+See _The IBM Style Guide_ (_Keywords_) for details.
+
+[[avoid-phrasal-verbs]]
+==== Avoid phrasal verbs
+
+*Example:* Find out the IP address for your system.
+
+*Improved:* Determine the IP address for your system.
+
+See _The IBM Style Guide_ (_Verbs_) for details.
+
+[[avoid-verbs-such-as-should-or-may]]
+==== Avoid verbs such as should, or may
+
+*Example:* You should not run the `rm -rf /` command as the root user.
+
+*Improved:* Do not run the `rm -rf /` command as the root user.
+
+*Example:* You may delete the log file.
+
+*Improved:* You can delete the log file.
+
+See the _may_, _should_, and _must_ entries in _The IBM Style Guide_.
+
+[[do-not-use-contractions]]
+==== Do not use contractions
+
+*Example:* don’t, can’t, it’s, would’ve
+
+*Improved:* do not, cannot, it is, would have
+
+See _The IBM Style Guide_ (_Contractions_) for details.
+
+[[second-level-issues]]
+=== Second-level issues - stylistic issues
+
+Rules are specific but might be inapplicable in certain cases. Violations might require reviewer’s judgment, and the fix is not obvious.
+
+[[no-unnecessary-passive-voice]]
+==== Ensure that unnecessary passive voice is not used
+
+See link:TODO[Passive voice] or _The IBM Style Guide_ (_Voice_) for details.
+
+[[no-unnecessary-future-tense]]
+==== Ensure that unnecessary future tense is not used
+
+See link:TODO[Future tense] or _The IBM Style Guide_ (_Tense_) for details.
+
+[[sentences-are-not-too-long]]
+==== Ensure that sentences are not too long
+
+See link:TODO[Defining Minimalism] for details.
+
+You can use a readability test, such as Flesch, Flesch-Kincaid, or Fog. See link:TODO[Flesch-Kincaid, Readability, and your documents: this is the number that matters!] for tips and resources. For examples of content edited to improve its readability scores, see link:TODO[Using Readability Scores to Improve Content].
+
+[[effective-titles]]
+==== Ensure that effective titles are used
+
+*Example:* Vault
+
+*Improved:* Storing Authentication Secrets by Using Vault
+
+*Example:* Integrated DNS in Identity Management
+
+*Improved:* Determining Whether Integrated DNS Is Appropriate for My Use Case
+
+See link:TODO[Defining Minimalism] for details.
+
+[NOTE]
+====
+Want to learn more? See the link:TODO[Write Better Titles and Headings] learning module.
+====
+
+[[as-few-words-as-possible]]
+==== Use as few words as possible
+
+*Example:* … compares the differences between two images.
+
+*Improved:* … compares two images.
+
+See link:TODO[Defining Minimalism] for details.
+
+////
+[NOTE]
+====
+Want to learn more? See the link:TODO[Using Fewer Words Is Better] learning module.
+====
+////
+
+[[third-level-issues]]
+=== Third-level issues - content issues
+This section covers guidelines for good technical writing and style. They mostly apply to the level of sentences and paragraphs and can be slightly subjective. Understanding of the subject matter might be beneficial for the reviewer.
+
+[[no-ambiguity]]
+==== Ensure that there is no ambiguity
+*Example:* The `/etc/httpd/conf.d/` directory contains a number of files. As Red Hat utilizes a single overcloud full image for all the nodes, it includes these files on all the nodes.
+
+*Problem:* What does “it” in the second sentence stands for?
+
+*Improved:* The `/etc/httpd/conf.d/` directory contains a number of files. As Red Hat utilizes a single overcloud full image for all the nodes, the installation includes these files on all the nodes.
+
+[[no-sentences-with-low-information-value]]
+==== Ensure that there are no sentences with low information value
+
+*Example:*
+
+Enter this command:
+
+----
+$ mkdir /tmp/dir
+----
+
+*Problem:* The users might not know what the command does.
+
+*Improved:*
+
+Create the /tmp/dir/ directory:
+
+----
+$ mkdir /tmp/dir
+----
+
+////
+[NOTE]
+====
+Want to learn more? See the link:TODO[Using Fewer Words Is Better] learning module.
+====
+////
+
+[[structure-paragraphs-appropriately]]
+==== Structure paragraphs appropriately
+Check that the following guidelines are followed:
+
+[[one-idea-per-paragraph]]
+* Ensure that each paragraph contains only one idea.
++
+.One idea per paragraph
+====
+*Original:*
+
+By default, Kerberos only stores one ticket per logged-in user in the credential cache. Whenever a user runs kinit, Kerberos overwrites the currently stored ticket with the new ticket. To obtain and store another TGT for a user, set a different credential cache, which ensures the contents of the previous cache are not overwritten.
+
+*Problem:*
+
+This paragraph describes the default behavior and the non-default one (= two ideas), and the distinction might not be clear at first sight.
+
+*Improved:*
+
+By default, Kerberos stores only one ticket per logged-in user in the credential cache. Consequentially, when a user runs kinit, Kerberos overwrites the ticket currently stored in the credential cache with the new ticket.
+
+To obtain and store another TGT for a user, specify a different credential cache. This ensures that the contents of the previous cache are not overwritten.
+====
+
+[[sequence-of-information-is-logical]]
+* Ensure that the sequence of information is logical.
++
+.Logical information flow
+====
+*Original:*
+
+_Stage users_ are not allowed to authenticate. This is an initial state.
+
+_Active users_ are allowed to authenticate. All required user account properties must be set in this state.
+
+_Preserved users_ are considered inactive and cannot authenticate to Identity Management.
+
+*Problem:*
+
+Preserved users have not yet been explained, so from this description, it might seem that preserved users are the same as stage users.
+
+*Improved:*
+
+_Preserved users_ are former active users. Preserved users are inactive and cannot authenticate to IdM.
+====
+
+[[information-has-an-appropriate-structure]]
+* Ensure that the information is structured appropriately.
++
+.Information structure
+====
+*Original:*
+
+Three types of machines exist in the IdM domain. Servers manage all of the services used by domain members. Replicas are copies of servers. Once a replica is installed, it is functionally identical to a server. Clients receive certificates and tickets issued by the servers, and use other centralized services for authentication and authorization.
+
+*Improved, using a list and highlighting:*
+
+Three types of machines exist in the Identity Management domain:
+
+* _Servers_ manage all of the services used by domain members.
+
+* _Replicas_ are copies of servers. Once a replica is installed, it is functionally identical to a server.
+
+* _Clients_ receive certificates and tickets issued by the servers and use other centralized services for authentication and authorization.
+====
+
+////
+[NOTE]
+====
+Want to learn more? See the link:TODO[Learning Path: Structuring Your Documents] learning modules.
+====
+////
+
+[[use-admonitions-only-when-necessary]]
+* Use admonitions only when necessary
++
+For details, see _Notes and notices_ in _The IBM Style Guide_.
+
+[[fourth-level-issues]]
+=== Fourth-level issues
+
+These high-level considerations help determine whether or not the document fulfills its purpose. These issues require understanding the subject matter. Some rules are highly subjective and potentially labor-intensive to assess and implement.
+
+[[meet-modular-guidelines]]
+==== Ensure the documentation structure meets the modular guidelines
+Make sure that the overall structure of the documentation meets the modular documentation guidelines.
+
+It is important to make sure that the documentation addresses a single user story.
+
+[[sections-include-the-appropriate-amount-of-information]]
+==== Ensure that sections include the appropriate amount of information
+
+[[provide-all-the-required-information]]
+Provide all the required information::
+Alternatively, links to other sections, man pages, or other resources with the required information are provided. See also
+xref:example-provide-all-the-required-information[the "Provide all the required information" example]
+
+[[do-not-include-any-unnecessary-information]]
+===== Do not include any unnecessary information
+
+*Example:* For the full list of the options accepted by the ipa-server-install utility, see Table 3.1, “ipa-server-install Options”.
+
+*Problem:* Documenting only selected commonly used options (with examples) is more useful than providing a list that the writer is obliged to update all the time.
+
+*Improved:* See the ipa-server-install(1) man page for a complete list of command options.
+
+////
+[NOTE]
+====
+Want to learn more? See the link:TODO[Using Procedures for Instructions] learning module.
+====
+////
+
+[[use-screenshots-and-other-visuals-where-required]]
+==== Use screenshots and other visuals (only) where required
+
+Keep in mind that screenshots may also require frequent updates, increase your repo size considerably, and represent an issue for accessibility.
+
+For tips, see the link:TODO[Documentation screenshot guidelines].
+
+[[provide-information-to-a-new-reader-at-the-right-pace]]
+==== Provide information to a new reader at the right pace
+
+xref:example-provide-information-to-a-new-reader-at-the-right-pace[The "Provide information to a new reader at the right pace" example]
+
+[[the-document-is-appropriate-for-the-intended-audience]]
+==== Ensure that the document is appropriate for the intended audience
+
+[[tasks-reflect-the-intended-goal-of-the-user]]
+===== Ensure that tasks reflect the intended goal of the user
+
+xref:example-tasks-reflect-the-intended-goal-of-the-user[The "Tasks reflect the intended goal of the user" example]
+
+See link:TODO[Defining Minimalism] for details.
+
+[[information-is-in-the-best-possible-location]]
+==== Ensure that information is in the best possible location
+
+xref:example-information-is-in-the-best-possible-location[The "Information is in the best possible location" example]
+
+See link:TODO[Defining Minimalism] for details.
+
+[[include-troubleshooting-and-error-recognition-steps-where-appropriate]]
+==== Include troubleshooting and error recognition steps where appropriate
+
+xref:example-include-troubleshooting-and-error-recognition-steps-where-appropriate[The "Include troubleshooting and error recognition steps where appropriate" example]
+
+See link:TODO[Defining Minimalism] for details.
+
+[[apply-templates-if-the-team-uses-them]]
+==== Apply templates if the team uses them
+
+The link:TODO[Flexible Customer Content] project is responsible for creating templates. For details see:
+
+* link:https://github.com/redhat-documentation/modular-docs/tree/master/modular-docs-manual/files[Modular documentation templates]
+* link:https://redhat-documentation.github.io/modular-docs/#appendix-examples[Module and assembly examples]
+// TODO: fix the above link
+
+[[the-content-is-accessible]]
+==== The content is accessible
+Wherever possible, the documentation should not be difficult to parse for people with various sensory or cognitive impairments. To ensure maximum viable degree of accessibility for your documentation, see our accessibility checklists:
+
+* link:TODO[Concise version]
+* link:TODO[Comprehensive version with examples]
+
+[[other-things-to-review]]
+=== Other things to review
+
+[[markup]]
+==== Review markup
+Markup guidelines differ from team to team, and we do not have common guidelines that all teams follow. If you know a particular team’s guidelines, feel free to review the markup too, or make a suggestion if you are unsure.
+
+[[real-world-peer-reviews]]
+=== Real-world peer reviews
+
+Need more examples or complete peer reviews? See link:TODO[real-world peer reviews].
+
+Also, check link:TODO[How to edit for quality].
+
+[[additional-resources]]
+=== Additional resources
+
+* link:https://redhat-documentation.github.io/supplementary-style-guide/[Red Hat supplementary style guide for product documentation]
+* link:https://www.amazon.com/Developing-Quality-Technical-Information-Information/dp/0131477498[Developing Quality Technical Information: A Handbook for Writers and Editors]
+* link:https://www.amazon.com/Style-Lessons-Clarity-Grace-12th/dp/0134080416[Style: Lessons in Clarity and Grace]

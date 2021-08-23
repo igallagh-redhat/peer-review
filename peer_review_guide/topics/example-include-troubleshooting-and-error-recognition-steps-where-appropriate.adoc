@@ -1,0 +1,53 @@
+[[example-include-troubleshooting-and-error-recognition-steps-where-appropriate]]
+
+=== The "Include troubleshooting and error recognition steps where appropriate" example
+
+*Example:*
+
+.Command Line: Creating HBAC rules
+
+. Use the `ipa hbacrule-add` command to add the rule.
++
+_... specific steps how to do it..._
+
+. Specify the target users.
++
+_... specific steps how to do it..._
+
+. Specify the target hosts.
++
+_... specific steps how to do it..._
+
+. Specify the target HBAC services.
++
+_... specific steps how to do it..._
+
+*Problem:*
+
+By following these steps, users cannot verify if the rule has been added correctly, which might cause problems later.
+
+*Improved:*
+
+.Command Line: Creating HBAC rules
+
+. Use the `ipa hbacrule-add` command to add the rule.
++
+_... specific steps how to do it..._
+
+. Specify the target users.
++
+_... specific steps how to do it..._
+
+. Specify the target hosts.
++
+_... specific steps how to do it..._
+
+. Specify the target HBAC services.
++
+_... specific steps how to do it..._
+
+. _Optional._ Verify that the HBAC rule has been added correctly.
+
+.. Use the `ipa hbacrule-find` command to verify that the HBAC rule has been added to IdM.
+
+.. Use the `ipa hbacrule-show` command to verify the properties of the HBAC rule.

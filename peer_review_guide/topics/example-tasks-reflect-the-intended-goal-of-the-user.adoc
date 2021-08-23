@@ -1,0 +1,53 @@
+[[example-tasks-reflect-the-intended-goal-of-the-user]]
+
+=== The "Tasks reflect the intended goal of the user" example
+
+*Example:*
+
+The 389 Directory Server and Dogtag Certificate System instances share a single directory database for data. Replication agreements are set up for different suffixes within that directory. The directory and certificate replication agreements are managed through different tools and are created and removed independently. If a certificate replication agreement is removed, but a data replication agreement is not, there can be problems with using certificates with some directory entries.
+
+For example, both data and certificate replication agreements exist between Server A and Server B. If the certificate agreement is removed, both Server A and Server B still have certificate authorities and are still issuing certificates, but that information is no longer being replicated. If Server A issues a certificate to Host 1, and then someone attempts to use Server B to manage Host 1, Server B returns an error that it cannot verify Host 1's certificate serial number.
+
+----
+Certificate operation cannot be completed: EXCEPTION (Certificate serial number 0x2d not found)
+----
+
+This is because Server B has information about Host 1 in its data directory, but it does not have the host certificate in its certificate directory.
+To work around this, enable replication between the two IdM servers.
+
+*Problem:*
+
+This is a troubleshooting content so we can assume that users want to:
+
+. Recognize if their problem is matching the documented problem.
+
+. Fix the problem.
+
+. Optionally, read what caused that problem to avoid it next time.
+
+The above text starts with two long conceptual paragraphs and the error message is buried at the end of the section. In addition, the most important information - how to fix the problem - is missing. The text only mentions to enable replication between the two IdM servers, but does not tell how.
+
+*Improved:*
+
+An error stating that a certificate serial number was not found appears on a replicated server:
+
+----
+Certificate operation cannot be completed: EXCEPTION (Certificate serial number 0x2d not found)
+----
+
+_What this means:_ A certificate replication agreement between two replicas has been removed but a data replication agreement is still in place. Both replicas are still issuing certificates, but information about the certificates is no longer replicated.
+
+Example situation:
+
+. Replica A issues a certificate to a host.
+
+. The certificate is not replicated to replica B, because the replicas have no certificate replication agreement established.                     
+
+. A user attempts to use replica B to manage the host.
+. Replica B returns an error that it cannot verify the host's certificate serial number. This is because replica B has information about the host in its data directory, but it does not have the host certificate in its certificate directory.
+
+_To fix the problem:_
+
+. Enable certificate server replication between the two replicas using the `ipa-csreplica-manage connect` command. See link:TODO[Section 32.3, “Creating and Removing Replication Agreements”].
+
+. Re-initialize one of the replicas from the other to synchronize them. See link:TODO[Section 32.5, “Re-initializing a Replica”].

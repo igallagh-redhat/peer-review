@@ -1,0 +1,115 @@
+[[peer-review-checklist]]
+== Peer review checklist
+
+This checklist provides a condensed version of the framework, which reviewers can use for quick reference. Use this checklist only when you are already familiar with all the issues and examples listed in xref:peer-review-framework[].
+
+[cols="9a,1"]
+|======================
+
+2+|*First-level issues*
+
+|xref:proper-english-grammar[Proper American English grammar]
+|&#9744;
+
+|xref:correct-english-spelling[Correct American English spelling, no typos]
+|&#9744;
+
+|xref:no-slang-or-non-english-words[No slang or non-English words]
+|&#9744;
+
+|xref:proper-word-usage[Proper word usage]
+|&#9744;
+
+|xref:acronyms-expanded-on-first-use[Acronyms expanded on first use]
+|&#9744;
+
+|xref:named-entities-qualified-on-first-use[Named entities qualified on first use]
+|&#9744;
+
+|xref:avoid-phrasal-verbs[Avoid phrasal verbs]
+|&#9744;
+
+|xref:avoid-verbs-such-as-should-or-may[Avoid verbs such as should or may]
+|&#9744;
+
+|xref:do-not-use-contractions[Do not use contractions]
+|&#9744;
+
+2+|*Second-level issues*
+
+|xref:no-unnecessary-passive-voice[No unnecessary passive voice]
+|&#9744;
+
+|xref:no-unnecessary-future-tense[No unnecessary future tense]
+|&#9744;
+
+|xref:sentences-are-not-too-long[Sentences are not too long]
+|&#9744;
+
+|xref:effective-titles[Effective titles]
+|&#9744;
+
+|xref:as-few-words-as-possible[As few words as possible]
+|&#9744;
+
+2+|*Third-level issues*
+
+|xref:no-ambiguity[No ambiguity]
+|&#9744;
+
+|xref:no-sentences-with-low-information-value[No sentences with low information value]
+|&#9744;
+
+|xref:structure-paragraphs-appropriately[Structure paragraphs appropriately]
+|&#9744;
+
+|xref:one-idea-per-paragraph[One idea per paragraph]
+|&#9744;
+
+|xref:sequence-of-information-is-logical[Sequence of information is logical]
+|&#9744;
+
+|xref:information-has-an-appropriate-structure[Information has an appropriate structure]
+|&#9744;
+
+|xref:use-admonitions-only-when-necessary[Use admonitions only when necessary]
+|&#9744;
+
+2+|*Fourth-level issues*
+
+|xref:meet-modular-guidelines[The overall structure meets modular guidelines]
+|&#9744;
+
+|xref:sections-include-the-appropriate-amount-of-information[Sections include the appropriate amount of information]
+|&#9744;
+
+|xref:provide-all-the-required-information[Provide all the required information]
+|&#9744;
+
+|xref:do-not-include-any-unnecessary-information[Do not include any unnecessary information]
+|&#9744;
+
+|xref:use-screenshots-and-other-visuals-where-required[Use screenshots and other visuals where required]
+|&#9744;
+
+|xref:provide-information-to-a-new-reader-at-the-right-pace[Provide information to a new reader at the right pace]
+|&#9744;
+
+|xref:the-document-is-appropriate-for-the-intended-audience[The document it appropriate for the intended audience]
+|&#9744;
+
+|xref:tasks-reflect-the-intended-goal-of-the-user[Tasks reflect the intended goal of the user]
+|&#9744;
+
+|xref:information-is-in-the-best-possible-location[Information is in the best possible location]
+|&#9744;
+
+|xref:include-troubleshooting-and-error-recognition-steps-where-appropriate[Include troubleshooting and error recognition steps where appropriate]
+|&#9744;
+
+|xref:apply-templates-if-the-team-uses-them[Apply templates if the team uses them]
+|&#9744;
+
+|xref:the-content-is-accessible[The content is accessible]
+|&#9744;
+|======================

@@ -1,0 +1,33 @@
+= Peer Review Guide
+:doctype: book
+:toc: left
+:toclevels: 3
+:imagesdir: images
+
+// General Information
+include::topics/general-information.adoc[]
+
+// Checklist
+include::topics/checklist.adoc[]
+
+// Peer Review Framework
+include::topics/framework.adoc[]
+
+// Peer Review Tips&Tricks
+include::topics/tips-and-tricks.adoc[]
+
+[appendix]
+include::topics/about-levels.adoc[]
+
+[appendix]
+== Longer examples of peer review framework issues
+
+include::topics/example-provide-all-the-required-information.adoc[]
+
+include::topics/example-provide-information-to-a-new-reader-at-the-right-pace.adoc[]
+
+include::topics/example-tasks-reflect-the-intended-goal-of-the-user.adoc[]
+
+include::topics/example-information-is-in-the-best-possible-location.adoc[]
+
+include::topics/example-include-troubleshooting-and-error-recognition-steps-where-appropriate.adoc[]

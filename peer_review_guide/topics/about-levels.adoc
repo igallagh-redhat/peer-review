@@ -1,0 +1,33 @@
+[[about-levels]]
+
+== About levels of issues in the peer review framework
+
+This document explains the purpose of using different issue levels in the xref:peer-review-framework[].
+
+[discrete]
+=== Why is the framework divided into levels?
+
+The main reason why we came up with the idea of various levels of issues was to bring some order to the chaos. Not all issues have the same weight, some of them are more complex than others and might require more time, some of them are trivial errors that can be found automatically.
+
+From our experience, we also noticed that some reviewers might not be aware of issues from the higher levels. They, for example, only search for typos but do not concentrate on the overall structure of the reviewed content.
+
+In addition, the levels can:
+
+* Serve as guidelines for writers who want to improve their peer reviewing skills. For example, a writer who has mastered recognizing first-level and second-level issues can work on getting better at recognizing third-level issues.
+
+* Help us measure the quality of our content. For example, a large number of first-level issues would indicate too many trivial errors that can easily be fixed, while fourth-level issues would tell us that we need to focus on more delicate issues.
+
+[discrete]
+=== What do the levels mean for me as a reviewer?
+
+The levels can serve you as a guide on what type of issue you can concentrate while doing a peer review. The levels do not determine in what order you should follow them. You can start from whatever level you want.
+
+Naturally, not all levels always apply to all reviewed contents. For instance, there is a difference between reviewing an erratum and a whole new chapter about a super cool new feature.
+
+You can also:
+
+* Categorize your findings based on the levels.
+
+* Use the levels as a personal reference for what action to take on an issue. For example, in the RHCI team, reviewers fix trivial issues (level 1) by themselves.
+
+* Use them to estimate how big an effort it will take to do a peer review. You can for example tell your colleague: “Right now, I have only time to concentrate on issues level 1 and 2. I will be able to do the rest (level 3 and 4) next week.”

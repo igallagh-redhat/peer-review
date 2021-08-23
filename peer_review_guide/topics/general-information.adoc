@@ -1,0 +1,46 @@
+[[general-information]]
+== General information
+This documentation provides information about reviewing the documents of your peers. It is intended for the technical writer and the reviewer. The reviewer learns about the scope and method of the review, and the technical writer learns what to expect from the review.
+
+[discrete]
+[[peer-review-definition]]
+=== Peer review definition
+
+*Peer review covers:*
+
+* Editorial clarity, correctness, and consistency of technical terminology. For more information about documentation conventions, see link:TODO[FAQ about style in CCS].
++
+//The Documentation Conventions project aims to create a central document that outlines conventions for technical terminology and Red Hat product-specific naming that will be used by all of the CCS documentation tea  ms
+
+* Structural clarity, focus, and completeness of information from the customer's perspective. This can come from the Minimalism framework, and can be something that applies only to reviews from within your product team. For more information on the minimalism initiative, see link:TODO[the Minimalism quality initiative]. This initiative works on gathering training information about minimalism.
+
+* Modular structure, focus, and completeness of writing and information from the writer's perspective. This can come from the modular documentation project. For more information on the modular documentation project, see the link:https://redhat-documentation.github.io/modular-docs/[Modular Documentation Reference Guide]. This project works on gathering training information about the modular documentation project.
+
+*Peer review does not cover:*
+
+* Technical accuracy in the sense of ”this represents the realities of the product being documented,” not technical verification.
++
+// Add a definition of technical accuracy here, if needed?
+
+
+
+[[how-to-use-this-document]]
+=== How to use this document
+
+This document consists of the following main parts:
+
+* xref:peer-review-checklist[Peer review checklist] - A condensed version of the Framework, which reviewers can use for quick reference. Make sure that you are familiar with the Framework first before using the Checklist.
+* xref:peer-review-framework[Peer review framework] - Lists things that reviewers should look at when providing a peer review, with examples and links to our CCS guidelines.
+* xref:tips-and-tricks[Peer review tips and tricks] - Provides additional information about the peer review process - what tools you can use and various insights and recommendations.
+
+[[how-to-provide-feedback]]
+=== How to provide feedback on the Peer Review Guide
+
+Do you have any questions about this document or its contents? Is something unclear, incorrect, or missing? Let us know by creating an link:TODO[issue] in GitLab.
+
+To raise an *issue* about the Peer Review Guide for the Peer Review team to address:
+
+. Go to the CCS Peer Review project in link:TODO[GitLab].
+. Toggle to the *Issues* tab and click *New Issue* button.
+. Add a title and a description for the issue. Include as much detail as possible in the *Description* field.
+. Click *Submit issue* to submit your request to the Peer Review team.
