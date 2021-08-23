@@ -1,0 +1,92 @@
+[[example-information-is-in-the-best-possible-location]]
+
+=== The "Information is in the best possible location" example
+
+*Example:*
+
+.5.3.1. One-way and two-way trusts
+
+IdM supports two types of trust agreements, depending on whether the entities that can establish connection to services in IdM are limited to only AD or can include IdM entities as well.
+
+One-way trust::
+One-way trust enables users and groups in AD to access resources in IdM, but not the other way around. The IdM domain trusts the Active Directory forest using the AD cross-forest trust feature, but the AD forest does not trust the IdM domain. One-way trust is the default mode for creating a trust. Running the `ipa trust-add` command without the `--two-way` option automatically sets up a one-way trust.
+
+Two-way trust::
+Two-way trust enables AD users and groups to access resources in IdM. However, the two-way trust in IdM does not give the users any additional rights compared to the one-way trust solution in AD. To set up a two-way trust, pass the `--two-way=true` option with the `ipa trust-add` command.
+
+.5.3.4. Creating a trust from the command line
+
+_...content..._
+
+.5.3.4.1. Preparing the IdM server for trust
+
+_...content..._
+
+.5.3.4.2. Creating a trust agreement
+
+Create a trust agreement for the Active Directory domain and the IdM domain by using the `ipa trust-add` command:
+
+----
+# ipa trust-add --type=type ad_domain_name --admin ad_admin_username --password
+----
+
+*Problem:*
+
+The _One-Way and Two-Way Trusts_ section includes both:
+
+* Conceptual information about creating a trust in Identity Management
+
+* Particular commands how to do it
+
+Therefore, the section mingles together:
+
+* Information that the user needs _before_ doing the task
+* Information that the user needs _while_ doing the task
+
+Users might not expect to have particular how-to information in a conceptual section. Also, in the guide there was already a more suitable section for this kind of information (_Creating a Trust Agreement_).
+
+In addition, in this particular case, a number of prerequisites must be completed before creating a trust. They are not mentioned in the _One-Way and Two-Way Trusts_ section.
+
+*Improved:*
+
+The information about the command-line options was moved from the conceptual section to the section containing steps how to create a trust. Also, the sections are now linked together.
+
+.5.1. Introduction to cross-forest trusts
+
+_... some other sections ..._
+
+.5.1.4. One-way and two-way Trusts
+
+IdM supports two types of trust agreements, depending on whether the entities that can establish connection to services in IdM are limited to only AD or can include IdM entities as well.
+
+One-way trust::
+One-way trust enables users and groups in AD to access resources in IdM, but not the other way around. The IdM domain trusts the Active Directory forest using the AD cross-forest trust feature, but the AD forest does not trust the IdM domain.
++
+One-way trust is the default mode for creating a trust.
+
+Two-way trust::
+Two-way trust enables AD users and groups to access resources in IdM. However, the two-way trust in IdM does not give the users any additional rights compared to the one-way trust solution in AD.
+
+See _Section 5.2, "Creating Cross-forest Trusts"_ for details on creating one-way and two-way trust.
+
+.5.2. Creating cross-forest trusts
+
+_...content..._
+
+.5.2.1. Environment and machine requirements
+
+_...content..._
+
+.5.2.2. Creating trusts
+
+_...some other sections..._
+
+.5.2.2.1.2. Creating a trust agreement
+
+Create a trust agreement for the Active Directory domain and the IdM domain by using the `ipa trust-add` command:
+
+----
+# ipa trust-add --type=type ad_domain_name --admin ad_admin_username --password
+----
+
+The `ipa trust-add` command sets up a one-way trust by default. To establish a two-way trust, pass the `--two-way=true` option. See _Section 5.1.4, “One-Way and Two-Way Trusts”_ for details.

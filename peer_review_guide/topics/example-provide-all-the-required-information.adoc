@@ -1,0 +1,38 @@
+[[example-provide-all-the-required-information]]
+=== The "Provide all the required information" example
+
+*Example:*
+
+.Procedure 13.1. Creating a snapper configuration file
+
+. Create or choose either:
+
+.. a thinly-provisioned logical volume with a Red Hat supported file system on top of it, or
+
+.. a Btrfs subvolume.
+
+. Mount the file system.
+
+. Create the configuration file that defines this volume.
++
+_...specific steps how to do it..._
+
+*Problem:* The user might not know how to create or mount the volumes as instructed in the step 1 and 2. Add links to additional resources.
+
+*Improved:*
+
+.Procedure 13.1. Creating a snapper configuration file
+
+. Create or choose either:
+
+.. a thinly-provisioned logical volume with a Red Hat supported file system on top of it, or
+
+.. a Btrfs subvolume.
++
+For details, see the File Systems part of this document.
+
+. Mount the file system. For details see the mount(8) manual page.
+
+. Create the configuration file that defines this volume.
++
+_...specific steps how to do it..._

@@ -1,0 +1,241 @@
+[[tips-and-tricks]]
+== Peer review tips and tricks
+
+[[general-recommendations]]
+=== General recommendations for peer review
+
+When requesting feedback, make it as easy as possible for the reviewer to help you efficiently:
+
+* Provide links to the text you need reviewed, ideally rendered in a preview tool like:
+** link:TODO[CI bots in GitLab]
+** link:TODO[Pantheon]
+** The link:TODO[Errata Tool].
+
+* Link to the ticket related to the content to be reviewed (if there is one) so your reviewer understands the context of any changes.
+* If you need a review of a specific Git commit, send the reviewer a link to the commit in link:TODO[GitLab], so they can specifically see what changes were made.
+
+When providing feedback:
+
+* Put your notes in a sensible order, and make it obvious what part of the document you are talking about, especially when reviewing a more extensive portion of content.
+* Add your own suggestions for improvement for the problematic parts (rather than just for example “this doesn’t make sense”).
+
+[[peer-review-methods]]
+=== Peer review methods
+
+==== Google docs
+.Usage
+Widely adopted and easy-to-use, Google Docs is a versatile tool that can serve for various formats of peer review.
+
+.Specifics
+* Asking for feedback:
+** After creating or copying your content in a Google Doc, make sure you allow other Red Hatters to comment in it (“Share” -> “Anyone at Red Hat with the link can comment”), then send the link (also under “Share”) to the reviewer.
++
+image::gdoc_share_button.png[role="thumb"]
+image::gdoc_share_screen.png[role="thumb"]
+
+** Alternatively, you can share the document only with select people by adding their names or mail addresses in “Share” -> “People”.
+
+* Providing feedback:
+** Unless specifically asked to do otherwise, use the Comment feature (Ctrl-Alt-m) to provide your observations. You can also suggest specific content changes by using Suggesting mode.
+
+image::gdoc_suggest.png[role="thumb"]
+
+.Pros
+
+* Can be open to multiple people
+* Easy to link to and add additional reviewers
+* Convenient for commenting on specific chunks of text
+* The same document can be used for both SME and peer review
+
+.Cons
+
+* Does not preserve markup
+* Copy-pasting large chunks of content from HTML  or PDF into Google Docs can be unreliable
+
+.Ideal for
+Any type of content where the content is more important than the markup, such as initial guide drafts, errata, release notes, or KBase articles.
+
+==== Bugzilla
+.Usage
+As the main bug-tracking tool in Red Hat, Bugzilla’s bug tickets, commonly referred to as “bugzillas” or “BZs”, allow Red Hatters to add comments and operate with flags, which can also be used for providing peer reviews.
+
+.Specifics
+* Asking for feedback:
+** To ask for a peer review in Bugzilla, add a needinfo flag in the particular BZ by checking “Need additional info from” and filling in the mail address of the reviewer, and provide a link to the document preview in a Comment.
++
+image::BZ_needinfo.png[role="thumb"]
+
+** Optionally, use the Docs Contact field to mark the reviewer of documentation BZs.
+** If the BZ is public, make sure that your comments are private, or that you do not disclose any confidential info.
+
+* Providing feedback:
+** If it is more extensive, write your feedback in an offline tool first to be safe, since BZ is an online interface that does not autosave your input.
+** If the BZ is public, make sure that your comments are private, or that you do not disclose any confidential info.
+
+.Pros
+* Officially tracked by default
+* Your comments are sent to everybody CC’d on the BZ
+
+.Cons
+
+* Limited space
+* In case of connection problems, your feedback might get lost before you send it
+* Your comments are sent to everybody CC’d on the BZ
+* Impossible to edit submitted comments. If you screw something up, everyone can see it forevermore
+
+.Ideal for
+Documentation BZs in general, especially those under a lot of scrutiny.
+
+==== JIRA
+.Usage
+JIRAs allow you to add peer-reviews as a sub-task within the documentation JIRA, and hence make peer reviews compulsory. When doing a peer review via JIRA, you can track the review comments within the JIRA itself, or attach a Google doc to review lengthy pieces of content.
+
+.Specifics
+* Asking for feedback:
+** Tag the intended reviewer in JIRA. If you are not sure, tag your DPM and ask him to assign further. The tagged person is notified via email about the assignment.
+** Provide a link to the content to be reviewed.
+
+* Providing feedback:
+** For shorter pieces of content, you may provide feedback as a JIRA comment itself.
+** For lengthy content, you may discuss with the writer and review in a Google Doc if it is more convenient.
+** Attach the reviewed Google Doc to the peer review JIRA sub task.
+
+.Pros
+* Ensures peer reviews are done on every JIRA
+* Multiple peers (writer, reviewer, QE, SME) can collaborate and discuss changes and confirm before any change is made.
+
+.Cons
+* Lengthy pieces of content can be tedious to discuss via comments in JIRA
+
+.Ideal for
+Teams that use JIRA for documentation tickets and intend to enforce peer reviews for every piece of content that is added to their documentation suite.
+
+==== Merge request
+.Usage
+Teams who have moved their content to GitLab can easily review/provide feedback directly on the source files in GitLab itself. Reviewing directly in merge requests (MRs) means there are fewer copies of content to maintain because you do not need to import content to Google docs or any other non-adoc/xml format for review purposes. Also, the reviews may be done, and hence corrections made, before merging the requests to the repo.
+
+.Specifics
+* Asking for feedback:
+** To ask for feedback on a merge request, simply tag the reviewer/s on the MR while submitting.
+** You can add a description of the JIRA or Bugzilla, and any specific details you would want the reviewer to keep in mind while doing the review.
+
+* Providing feedback:
+** Toggle to the ‘Changes’ tab to view the topics updated in the MR. The content added is highlighted in green color; content removed is highlighted in pink.
++
+image::MR_Changes_Tab.png[role="thumb"]
+
+** Go to the line number that you want to comment on, and click the balloon callout that appears when you move your mouse pointer at the beginning of the line. This opens a comment box in which you can enter your review comments.
++
+image::MR_Comment.png[role="thumb"]
+
+** Follow the same procedure for rest of the lines/topics.
+
+.Pros
+
+* Commenting is easy to interpret, as you can provide comments on respective line numbers.
+* Multiple people involved in the JIRA/Bugzilla (writer, SME, QE) can collaborate on the same MR.
+* Feedback can be incorporated before the MR is accepted, hence one less cycle of changes to the repo.
+
+.Cons
+
+* Good to have familiarity with the GitLab UI
+* Might be confusing for the first-time GitLab MR reviewers.
+
+.Ideal for
+Teams that have their content in GitLab and use merge requests to update their repositories.
+
+==== Email
+.Usage
+Possibly the simplest way of conducting peer review in CCS is simply putting your thoughts and notes down in an email and sending it to the writer.
+
+.Specifics
+None
+
+.Pros
+* Comprehensive
+* Easy for the writer to refer to later on
+* Less pressure on the reviewer
+
+.Cons
+* Potentially slow and time-consuming
+* Less pressure on the reviewer
+* “Hidden” (only between two or a limited sum of people, and difficult to link)
+* The feedback can be hard to read if not structured well
+
+.Ideal for
+Short pieces of content that do not require higher transparency of the review process.
+
+==== IRC (or a different chat system)
+.Usage
+If you require a more immediate response or only have a very short piece of text to review, a messaging service such as IRC, gchat, or Slack can be the tool for the task. Chats are also a very good way to confirm that a specific person is available and willing to do a peer review for you.
+
+.Specifics
+* Asking for feedback:
+** Contact the potential reviewer in a chat channel or send them a private message.
+** Some Red Hatters might consider the “naked ping” (only sending “ping” for initial contact) impolite, which would lessen your chances of them agreeing to do the review. So, consider starting the conversation with a full-ish sentence.
+** Make sure you have conversation logging enabled, so you can safely return to the feedback later, if need be.
+
+* Providing feedback:
+** If contacted via chat, first verify with the writer in what form they would like to receive your review.
+** If using a chat for reviews, organize your feedback into smaller chunks, which you send gradually, to allow the writer to implement the feedback as fast as possible.
+
+.Pros
+* Fast
+* Opportunity for immediate discussion
+* Harder-to-miss for the reviewer (if they are online)
+
+.Cons
+* Limited space
+* Both participants must be online
+* Unless done entirely in a channel, only open to one reviewer at a time and “hidden”
+
+.Ideal for
+Quick reviews of short pieces of documentation, such as one-line fixes or individual release notes, if they do not require review transparency.
+
+==== Pair writing
+.Usage
+An alternative to traditional peer review, wherein two writers collaborate on a piece of content simultaneously.
+
+.Specifics
+See link:TODO[Pair writing - theoretical stuff].
+
+.Pros
+
+* Very intense and time-efficient
+* Both involved writers can pick up a lot of new skills and insights from each other
+* If the writer and reviewer disagree on something, they can resolve the situation on the spot and come to the best solution together
+
+.Cons
+
+* Less effective if the two writers are not in the same physical location
+* Some people might not be very comfortable with it
+* Might require meticulous(ish) planning
+* Some people do not pair easily with everyone
+
+.Ideal for
+* Feedback that is complex and difficult to explain in writing
+* Situations where you want to encourage further discussion on the spot
+
+[[miscellaneous]]
+=== Miscellaneous tips
+* To see if any peer reviewer is available and willing to work with you (regardless of the review method), you can ask in one of the CCS IRC channels:
+** #ecsbrno
+** #docs
+** #CCS-India
++
+and potentially other geo-specific CCS channels.
+* For potential errata peer reviewers, see the link:TODO[CCS internal SMEs list].
+* If you are looking for a writer who works on a specific product, see the link:TODO[CCS product coverage].
+
+=== FAQ
+.Who should be getting peer reviews, and who should be providing them?
+Newer writers are required to seek out a peer review even before submitting their work for review by the SME. Afterwards, they need to get another peer review from a different writer, to quickly gain as much insight as possible. However, even grizzled writing veterans can benefit from a fresh pair of eyes and a different reader perspective - even from somebody fairly new, who in turn also increases their documentation know-how, and gets smoothly introduced to peer reviewing.
+
+.Am I obligated to seek out a peer review every time I document something?
+Getting peer review is strongly encouraged, but not mandatory. For example, if you are racing against a deadline and there is nobody available for a quick review, or if your changes to the documentation only consist of trivial typo fixes, not getting any peer review should not be considered a blocker.
+
+.What if the peer reviewer tells me to make some changes that I do not agree with?
+It is called a *peer* review, so while one of the parties involved might be more experienced, it does not necessarily make them the executive authority. If you disagree with the feedback you got, a discussion of its reasoning should clear it up. If that does not do the trick, ask for a third writer’s opinion, or consult a style guide or an already vetted piece of documentation.
+
+.Can I be somehow penalized for not getting or providing peer reviews?
+Definitely not, at least not directly. If you are too busy or need to get your documentation out on a very tight schedule, it is perfectly understandable that you cannot afford peer reviews. However, by consistently avoiding peer reviews, you might be depriving yourself of an opportunity to learn a lot and improve your content (at little cost to your own time, too!) - so you are basically penalizing yourself.

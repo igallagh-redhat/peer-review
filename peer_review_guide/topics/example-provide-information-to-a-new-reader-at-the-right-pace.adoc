@@ -1,0 +1,31 @@
+[[example-provide-information-to-a-new-reader-at-the-right-pace]]
+
+=== The "Provide information to a new reader at the right pace" example
+
+*Example:*
+
+.18.1. Managing certificates with the integrated IdM CA
+
+The integrated IdM certificate authority (CA) can create, revoke, and issue certificates. The administrator can add the certificates to user, host, or service entries. An entry can have multiple certificates assigned.
+
+If you need to invalidate the certificate before its expiration date, you can revoke it. You must specify a reason for the revocation.
+
+A revoked certificate is invalid and cannot be used for authentication. Only certificates revoked because of reason 6: Certificate Hold can be restored again.
+
+*Problem:* Most of the information is relevant only to a section about revoking certificates not to the introductory section. Users do not need such information at the beginning.
+
+*Improved:*
+
+.18.1. Managing certificates with the integrated IdM CA
+
+The integrated IdM certificate authority (CA) can create, revoke, and issue certificates.
+
+.18.1.1. Revoking certificates with the integrated IdM CA
+
+If you need to invalidate the certificate before its expiration date, you can revoke it. To revoke a certificate using:
+
+* the IdM web UI, see link:TODO[the section called “Web UI: Revoking Certificates”]
+
+* the command line, link:TODO[see the section called “Command Line: Revoking Certificates”]
+
+A revoked certificate is invalid and cannot be used for authentication. All revocations are permanent, except for reason 6: Certificate Hold.

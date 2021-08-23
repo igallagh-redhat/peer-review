@@ -75,7 +75,6 @@ To submit an update:
 
 After you submit a pull request, it will be reviewed by members of this project.
 
-<!--
 ## Building the guide
 
 You must have `asciidoctor` installed.
@@ -89,6 +88,7 @@ You must have `asciidoctor` installed.
 
 This generates a `master.html` file that you can now view in a browser.
 
+<!--
 ## Contributing guidelines
 
 See the [Contributing guidelines](GUIDELINES.adoc) for guidelines to follow when making an update.

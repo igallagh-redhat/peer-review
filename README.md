@@ -4,7 +4,7 @@
 
 The purpose of this project is to create guidelines for peer reviewing Red Hat product documentation.
 
-**This project is currently a work in progress**
+**This project is currently a work in progress!**
 
 ## Suggestions or questions?
 
